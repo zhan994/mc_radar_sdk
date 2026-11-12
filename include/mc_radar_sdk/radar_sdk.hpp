@@ -205,7 +205,7 @@ class RadarSdk {
     point.azimuth = ReadI16(data + 10) / 100.0f;
     point.elevation = ReadI16(data + 12) / 100.0f;
     point.rcs = ReadI16(data + 14) / 256.0f;
-    point.snr = ReadI16(data + 16);
+    point.snr = ReadI16(data + 16) / 100.0f;
     point.doppler_confidence = data[18];
     point.exist_confidence = data[19];
     point.frame = ReadU16(data + 20);
